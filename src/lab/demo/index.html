@@ -1,0 +1,573 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Various Arithmetic Circuits</title>
+
+<!-- YUI -->
+<link rel="stylesheet" type="text/css" href="css/reset-fonts-grids.css" />
+<link rel="stylesheet" type="text/css" href="css/skin.css" />
+<link href="../../css/common.css" rel="stylesheet" type="text/css">
+
+<!-- InputEx CSS -->
+<link type='text/css' rel='stylesheet' href='css/inputEx.css' />
+
+<!-- YUI-accordion CSS -->
+
+<link rel="stylesheet" type="text/css" href="css/accordionview.css" />
+<!--<link rel="stylesheet" type="text/css" href="css/styledropdown.css" />-->
+
+<!-- WireIt CSS -->
+<link rel="stylesheet" type="text/css" href="css/WireIt.css" />
+<link rel="stylesheet" type="text/css" href="css/WireItEditor.css" />
+
+
+
+<!-- Libs -->
+<script type="text/javascript" src="js/utilities.js"></script>
+
+
+<script type="text/javascript">
+function image3() {
+var img = document.createElement("IMG");
+img.src = "images/t4.png";
+document.getElementById('image').appendChild(img);
+}
+</script>
+<script type="text/javascript">
+function image4() {
+var img = document.createElement("IMG");
+img.src = "images/t5.png";
+document.getElementById('image').appendChild(img);
+}
+</script>
+<script type="text/javascript">
+function image5() {
+var img = document.createElement("IMG");
+img.src = "images/t6.png";
+document.getElementById('image').appendChild(img);
+}
+</script>
+<script type="text/javascript">
+function image6() {
+var img = document.createElement("IMG");
+img.src = "images/t7.png";
+document.getElementById('image').appendChild(img);
+}
+</script>
+<script type="text/javascript" src="js/resize-min.js"></script>
+<script type="text/javascript" src="js/layout-min.js"></script>
+<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/container-min.js"></script>
+<script type="text/javascript" src="js/json-min.js"></script>
+<script type="text/javascript" src="js/button-min.js"></script>
+<script type="text/javascript" src="js/tabview-min.js"></script>
+<script src="js/accordionview-min.js"  type='text/javascript'></script>
+<script type="text/javascript" src="js/excanvas.js"></script>
+
+
+<!-- WireIt -->
+<script type="text/javascript" src="js/wireit-inputex-editor-min.js"></script>
+
+<script type="text/javascript" src="js/json-rpc.js"></script>
+<script type="text/javascript" src="js/logicGates.js"></script>
+<style>
+div.WireIt-Container-closebutton { top: -16px; }
+div.WireIt-ImageContainer div.body { width: 240px;height: 292px } <!-- for gates 110 for convertors 280 for mux 400-->
+
+div.WiringEditor-module-Lightbulb { height:100px; width:55px; }
+div.WiringEditor-module-Lightbulb div.body {	height:70px; width:50px; }
+
+div.WiringEditor-module-Clock { height:100px; width:80px; }
+div.WiringEditor-module-Clock div.body { height:70px; width:50px; }
+
+div.WiringEditor-module-Switch { height:60px; width:74px; }
+div.WiringEditor-module-Switch div.body { height:45px; width:80px; }
+
+.WiringEditor-module span { display: none; }
+.WiringEditor-module { float: left; }
+
+#header{
+	top:1px;
+	left:-1px;
+	position:absolute;
+	border:2px groove  #c4c4c4;
+	width:1429px;
+	height:130px;
+	overflow:auto;
+	background : url("../../images/ui-bg_gloss-wave_35_f6a828_500x100.png") repeat-x scroll 50% 50% #84BFDF;
+}
+.imag{position:absolute;z-index:9999;left:642px;top:-17px;}
+	.imag1{position:absolute;z-index:9999;left:1000px;top:85px;}
+
+ #layout-doc{
+ 	
+ 	top:117px;
+ 	overflow:auto;
+ }
+
+ .yui-layout-bd yui-layout-bd-nohd yui-layout-bd-noft{
+ 	
+ 	height:0px;
+ 	 width: 1427px; 
+ 	 top: 0px;
+ }
+ .yui-skin-sam .yui-layout
+ 
+ {
+ 	background-color: transparent;
+ 	
+ }
+ .yui-gen13
+ {
+ 	
+ 	background:none;
+ }
+ 
+ #yui-gen8
+ {
+ 	height: 439px;
+    left: 1109px;
+    position: absolute;
+    top: 57px;
+    width: 320px;
+}
+ 
+
+
+</style>
+</head>
+<div>
+<body class="yui-skin-sam">
+	
+	<div id="header"><span id="titleHeader" style="font-size:25px; color: #ffffff; position: absolute;left: 15px;top: 20px;"><img class = "imag" src="../../images/coep_logo_sim.png"></a>
+	<h3 align="left">Hybrid Electronics Laboratory Simulator</h3>
+	</div>
+	
+	<div id="top" >
+	
+		<div id="toolbar">			
+		</div>
+		<div class="topright">
+		</div>
+	</div>
+
+	<!-- Left panel-->
+	<div id="left">
+	
+		<!-- Accordion for module categories-->
+
+
+		 <ul id="modulesAccordionView" style="height: 550px; overflow: auto;">
+		 	
+		 		<!--<div class="yui-layout-bd yui-layout-bd-noft" style="width: 188px; top: 24px; height: 200px;"></div>-->
+			<li>
+				<h2>Input Controls</h2>
+				<div>
+					<div id='module-category-input'  style="position:relative; height: 20px;" ></div>
+				</div>
+			</li>
+			
+			<li>
+
+				<h2>Output Controls</h2>
+				<div>
+					<div id='module-category-output' style="position:relative; height: 40px;" ></div>
+				</div>
+			</li>
+			<li>
+				<h2>Gates</h2>
+				<div>
+
+					<div id='module-category-gate'></div>
+				</div>
+			</li>	
+			
+			<li>
+				<h2>Adder & Subtracter</h2>
+				<div>
+
+					<div id='module-category-addsub'></div>
+				</div>
+			</li>	
+			<li>
+
+				<h2>Convertors</h2>
+				<div>
+					<div id='module-category-Convertor'></div>
+				</div>
+			</li>
+			<li>
+
+				<h2>Flip - Flops</h2>
+				<div>
+					<div id='module-category-flipflop'></div>
+				</div>
+			</li>	
+			<li>
+
+				<h2>MUX & DEMUX</h2>
+				<div>
+					<div id='module-category-muxdemux'></div>
+				</div>
+			</li>	
+			<li>
+
+				<h2>ENCODER & DECODER</h2>
+				<div>
+					<div id='module-category-encode_decode'></div>
+				</div>
+			</li>	
+			<li>
+
+				<h2>ALU</h2>
+				<div>
+					<div id='module-category-alu'></div>
+				</div>
+			</li>	
+			<li>
+
+				<h2>COMPARATOR</h2>
+				<div>
+					<div id='module-category-cm'></div>
+				</div>
+			</li>	
+			<li>
+
+				<h2>MULTIPLIER</h2>
+				<div>
+					<div id='module-category-m'></div>
+				</div>
+			</li>	
+		</ul>
+		<!--<div class="yui-layout-bd yui-layout-bd-noft" style="width: 188px; top: 24px; height: 348px;"></div>-->
+	</div>
+	<div id="right">
+		<ul id="accordionView" style="height: 550px; overflow: auto;">
+		<!--<ul id="modulesAccordionView">-->
+				<li>
+				<h2>AND GATE</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t1.png">
+				</div></li>
+				<li>
+				<h2>OR GATE</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t2.png">
+				</div></li>
+				<li>
+				<h2>NOT GATE</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t3.png">
+				</div></li>
+				<li>
+				<h2>NAND GATE</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t4.png">
+				</div></li>
+				<li>
+				<h2>NOR GATE</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t5.png">
+				</div></li>
+				<li>
+				<h2>XOR GATE</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t6.png">
+				</div></li>
+				<li>
+				<h2> XNOR GATE</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t7.png">
+				</div></li>
+				
+				<li>
+				<h2> Half Adder</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/halfA.png">
+				</div></li>
+				<li>
+				<h2> Full ADDER</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+				<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t8.png">
+				</div></li>
+				<li>
+				<h2> Half Subtractor</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/halfS.png">
+				</div></li>
+				
+				<li>
+				<h2> Full Subtractor</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t9.png">
+				</div></li>
+				
+				<li>
+				<h2>Binary To Gray</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t11.png">
+				</div></li>
+				<li>
+				<h2> Gray To Binary</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t10.png">
+				</div></li>
+				
+				<li>
+				<h2>BCD To Excess-3</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t12.png">
+				</div></li>
+				<li>
+				<h2>Excess-3 To BCD</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t13.png">
+				</div></li>
+				<li>
+				<h2>SR Flip Flop</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t14.png">
+				</div></li>
+				<li>
+				<h2>D Flip Flop</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t15.png">
+				</div></li>
+				<li>
+				<h2>JK Flip Flop</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t16.png">
+				</div></li>
+				<li>
+				<h2>T Flip Flop</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t17.png">
+				</div></li>
+				
+				<li>
+				<h2>2 : 1 MUX</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/dem21.png">
+				</div></li>
+				<li>
+				<h2>4 : 1 MUX</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t18.png">
+				</div></li>
+				<li>
+				<h2>8 : 1 MUX</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t20.png">
+				</div></li>
+				
+				<li>
+				<h2>1 : 2 DEMUX</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/dem12TT.png">
+				</div></li>
+				<li>
+				<h2>1 : 4 DEMUX</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/dem14TT.png">
+				</div></li>
+				<li>
+				<h2>1 : 8 DEMUX</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/t21.png">
+				</div></li>
+				
+				
+				
+				<li>
+				<h2>2 : 4 Decoder</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/deco24.png">
+				</div></li>
+				<li>
+				<h2>3 : 8 Decoder</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/deco38TT.png">
+				</div></li>
+				
+				<li>
+				<h2>4 : 2 Encoder</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/enco42TT.png">
+				</div></li>
+				<li>
+				<h2>8 : 3 Encoder</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/enco83.png">
+				</div></li>
+				<li>
+				<h2>Comparator 1 bit</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/tt.png">
+				</div></li>
+				
+				
+				
+				<li>
+				<h2>Comparator 2 bit</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/c2t.png">
+				</div></li>
+				
+				<li>
+				<h2>Multiplier 2 bit</h2>
+				<div>
+					<div id = "image"></div>
+					<!--<div id="propertiesForm"></div>-->
+					<div class="WireIt-Container-closebutton"></div>
+					<img src="images/tmnew.png">
+				</div></li>
+				<li>
+				<h2>Minimap</h2>
+				<div style='position: relative;'>
+					<div id="layerMap"></div>
+
+				</div>
+			</li>
+			<li>
+				<h2>Circuit Diagram</h2>
+				<div>
+				  <div style="padding: 10px;">
+					Here circuit diagram will come</br></br></br></br></br>
+				  </div>
+				</div>
+			</li>
+
+	</div>
+	
+	<div id="center">
+		<div class="WireIt-optionmultiplexer" id = "option">
+	
+		</div>
+	</div>
+
+	<div id="helpPanel">
+	    <div class="hd">logicGates (WiringEditor example)</div>
+	    <div class="bd" style="text-align: left;">
+	        <p>This example uses <i>ImageContainers</i> to represent logic gates.</p>
+
+			<br />
+			<p><b>Drag and drop modules from the Module list</b> on the left to the working layer in the middle.</p>
+			<br />
+			<p><a href="logicGates.js" target="_new">Click here to view the language definition for this editor.</a></p>
+	    </div>
+	</div>
+</div>
+	<div style="position:absolute; top:924px; width:1403px;margin 0 auto;">
+			<div class="art-footer">
+                <div class="art-footer-t"></div>
+                <div class="art-footer-l"></div>
+                <div class="art-footer-b"></div>
+                <div class="art-footer-r"></div>
+                <div class="art-footer-body">
+                    <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+					<!--<a href="./../../../feedback.htm" class="art-rss-feedback-icon" title="RSS"></a>-->
+                            <div class="art-footer-text">
+                                <p><a href="#">About Us</a> | <a href="../../contacts.htm">Contact Us</a> | <a href="../../feedback.htm">Feedback</a></p><p>Copyright &#169;2011.COEP Virtual Lab.</p>
+                                                            </div>
+                    <div class="cleared"></div>
+                </div>
+            </div>
+	</div>
+</body>
+
+</html>

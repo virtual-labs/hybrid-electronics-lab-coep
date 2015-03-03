@@ -1,0 +1,24 @@
+$(function(){
+				//initializing the range sliders
+		$(":range").rangeinput({  progress: true, max: 100 });
+		$("#power").click(function(){
+		var id = "power"
+			//document.getElementById(id).src = "on.png"
+			window.setTimeout(function(){
+			document.getElementById(id).src = "on.png";
+			},200)
+			document.getElementById(id).src = "off.png"
+			//call the function which resetes the value
+			});
+		
+		 $("#trigger").mouseup(function(){
+			var id = "trigger"
+			document.getElementById(id).src = "trigger_on.png";
+			//call plot function to plot for trigger
+			});
+		 $("#trigger").mousedown(function(){
+			document.getElementById("trigger").src = "trigger_off.png"
+			})
+			
+			
+		})		
