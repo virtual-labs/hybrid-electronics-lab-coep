@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+
+<!--
+	This is a jQuery Tools standalone demo. Feel free to copy/paste.
+	                                                         
+	http://flowplayer.org/tools/demos/
+	
+	Do *not* reference CSS files and images from flowplayer.org when in production  
+
+	Enjoy!
+-->
+
+<head>
+	<title>Hybrid Lab Demo</title>
+<!-- tab styling -->
+		<link   type="text/css"  rel="stylesheet"  href="css/tabs.css"  />
+		<link   type="text/css"  rel="stylesheet"  href="css/example.css"  />
+	<!-- include the Tools -->
+		<script src="js/jquery.tools.min.js"></script>
+		<script type="text/javascript" src = "js/example.js"></script>
+		<script type="text/javascript" src="js/jquery-1.5.1.min.js"> </script>
+		<script language="javascript" type="text/javascript" src="js/jquery.flot.js"></script>
+		<script type="text/javascript" src="js/raphael.js"></script>
+	
+	<!-- tab pane styling -->
+	
+</head>
+
+<body>
+
+<img src="HLE.png" />
+	
+
+<div class="wrap">
+
+	<!-- the tabs -->
+	<ul class="tabs">
+				
+		<li><a href="#">Main</a></li>
+		<li><a href="#">Experiment 1</a></li>
+		<li><a href="#">Experiment 2</a></li>
+		<li><a href="#">Experiment 3</a></li>
+		<li><a href="#">Experiment-4</a></li>
+		<li><a href="#">Experiment-5</a></li>
+		<li><a href="#">Experiment-6</a></li>
+	</ul>
+
+	<!-- tab "panes" -->
+	<div class="pane">
+			<!-- the main tab -->
+			<label id="topic1">List of Experiments</label>
+			<label id="topic2">Experiment 1:4-bit Adder and Subtractor</label>
+			<label id="topic3">Experiment 2:4-bit Code Converter</label>
+			<label id="topic4">Experiment 3:Counters</label>
+			<label id="topic5">Experiment 4:Arithemetic Logic Unit</label>
+			<label id="topic6">Experiment 5:Decoder,Encoder,Multiplexer and Demultiplexer</label>
+			<label id="topic7">Experiment 6:Analog to Digital and Digital to Analog Converter</label>
+	
+	</div>
+	 <!-- the experiment 1 -->
+	<div class="pane">
+			
+			<!-- the experiment 1 tabs -->
+			<ul class="tabs">
+				<li><a href="#">Adder</a></li>
+				<li><a href="#">Subtracter</a></li>
+				<li><a href="#">4 bit Adder/Subtractor</a></li> 
+			</ul>
+
+			<!--Adder -->
+			<div class="pane">
+						
+					<!-- the tabs -->
+						<ul class="tabs">
+							<li><a href="#">Half Adder</a></li>
+							<li><a href="#">Full Adder</a></li>
+							<li><a href="#">2bit Adder</a></li> 
+						</ul>
+					<!--half adder-->
+					<div  class="pane" id = "halfadder">
+						<div id = "switch" >
+							<!--<label for = "a" style = "position : absolute; top:90px ; left : 20px;">A_input</label>-->
+							<img src="off.png" id = "a" style = "position : absolute; top:342px ; left : 372px;"/>
+							<!--<label for = "b" style = "position : absolute; top:90px ; left : 50px;">B_input</label>-->
+							<img src="off.png" id = "b" style = "position : absolute; top:342px ; left : 430px;"/>
+							<img src="square1.png" id= "img" style = "position : absolute;top:450px ; left :370px;"/>
+							<img src="lightbulb.png" id = "sum" style = "position : absolute; top:580px ; left : 347px;"/>
+							<img src="lightbulb.png" id = "carry" style = "position : absolute; top:580px ; left : 444px;"/>
+						</div>
+					</div>
+					<!--full adder-->
+					<div  class="pane">
+						<div id = "switch1" >
+							<img src="off.png" id = "button1" style = "position : absolute; top:342px ; left : 372px;"/>
+							<img src="off.png" id = "button2" style = "position : absolute; top:342px ; left : 430px;"/>
+							<img src="off.png" id = "button3" style = "position : absolute; top:472px ; left : 591px;"/>
+							<img src="square1.png"id= "img1" style = "position : absolute;top:450px ; left :370px;"/>
+							<img src="lightbulb.png" id = "sum1" style = "position : absolute; top:580px ; left : 347px;"/>
+							<img src="lightbulb.png" id = "carry1" style = "position : absolute; top:580px ; left : 444px;"/>
+						</div>
+					</div>
+					 <!-- 2 bit adder-->
+					<div  class="pane">2 bit</div>
+			</div>
+			
+			<!--Subtracter-->
+			<div class="pane">Second tab content
+			
+				<ul class="tabs">
+					<li><a href="#">Half Subtractor</a></li>
+					<li><a href="#">Full Subtractor</a></li>
+				</ul>
+			</div>
+			<!--4 bit addre & subtracter-->			
+			<div class="pane">Third tab content</div>
+	</div>
+	<!-- experiment 2-->
+	<div class="pane">
+		<ul class="tabs">
+			<li><a href="#">Binary to Gray</a></li>
+			<li><a href="#">Gray to Binary</a></li>
+			<li><a href="#">BCD to Excess</a></li>
+			<li><a href="#">Excess-3 to BCD</a></li>
+		</ul>
+		<!--Binary to Gray -->
+			<div class="pane">
+				<img src="off.png" id = "button1" style = "position : absolute; top:342px ; left : 372px;"/>
+				<img src="off.png" id = "button2" style = "position : absolute; top:342px ; left : 430px;"/>
+				<img src="off.png" id = "button3" style = "position : absolute; top:342px ; left : 488px;"/>
+				<img src="off.png" id = "button3" style = "position : absolute; top:342px ; left : 546px;"/>
+				<img src="/images/binary_to_gray.png" />
+			</div>
+		<!--Gray to Binary -->
+			<div class="pane">Gray to Binary </div>
+		<!--BCD to Excess -->
+			<div class="pane">BCD to Excess </div>
+		<!--Excess-3 to BCD -->
+			<div class="pane">Excess-3 to BCD </div>
+	</div>
+	<!-- experiment 3-->
+	<div class="pane">
+		<ul class="tabs">
+			<li><a href="#">4Bit Binary Counter</a></li>
+			<li><a href="#">4Bit BCD Counter</a></li>
+			<li><a href="#">4Bit Johnson Counter</a></li> 
+			<li><a href="#">4Bit Ring Counter</a></li> 
+			<li><a href="#">Universal Shift Counter</a></li> 
+		</ul>
+	</div>
+	<!-- experiment 4-->
+	<div class="pane">
+		<ul class="tabs">
+			<li><a href="#">LOGIC OPERATIONS</a></li>
+			<li><a href="#">ARITHMETIC </a></li>
+		</ul>
+	</div>
+	<!-- experiment 5-->
+	<div class="pane">
+		<ul class="tabs">
+			<li><a href="#">Encoder</a></li>
+			<li><a href="#">Decoder</a></li>
+			<li><a href="#">Multiplexer</a></li> 
+			<li><a href="#">Demultiplexer</a></li> 
+		</ul>
+	</div>
+	<!-- experiment 6-->
+	<div class="pane">
+	<ul class="tabs">
+		<li><a href="#">BINARY WEIGHTED</a></li>
+		<li><a href="#">R-2R LADDER </a></li>
+		<li><a href="#">ANALOG TO DIGITAL</a></li> 
+		<li><a href="#">RESOLUTION</a></li> 
+	</ul>
+
+	<div class="pane">
+		<fieldset>
+			<legend>Binary Weighted Resistors DAC</legend>
+			<div id = "image"></div>
+			<div id="resistance">
+			<input type="text"  id = "r1" size = 12 disabled="true" />
+			<input type="text" id = "r2"  size = 12 disabled="true"/>
+			<input type="text"  id = "r3" size = 12 disabled="true" />
+			<input type="text" id = "r4"  size = 12 disabled="true"/>
+			<input type="text"  id = "r5" size = 12 disabled="true"/>
+			<input type="text"  id = "r6" size = 12 disabled="true"/>
+			<input type="text"  id = "r7" size = 12 disabled="true"/>
+			<input type="text"  id = "r8" size = 12 disabled="true"/>
+			</div>
+			<div id= "vrbinary">
+				<input type="range" min = "0" max="10" step="0.1" id = "vr"   />
+				 <label for = "vr" style= "font-size: 17x;font-weight: normal;position :relative;left : 12px;"> - Vr(0-10)</label>
+			</div>
+			<div style= "position :relative; left :130px; top : 14px" id= "rbinary">
+				<input type="range" min = "0" max="1000" step="10.1" id=  "r"  />
+				<label for = "r" style= "font-size: 17px;font-weight: normal;position :relative; left  :10px;"> - Resistance(0-1000)  </label> 
+			</div>
+			<div style= "position :relative; left :370px;top : 90px" id= "rfbinary">
+				<input type="range" min = "0" max="1000" step="10.1" id=  "rf"  />
+				<label for = "rf" style= "font-size: 17px;font-weight: normal;position :relative; left  :10px;"> - Rf(0 - 1000)  </label> 
+			</div>
+			<div id ="outputbinary">
+				<input type = "text" name = "output" size = 4></input>
+			</div>
+			<div id = "switch" >
+			<label for = "b7" style = "position : absolute; top:90px ; left : 20px;">B7</label>
+			<img src="off.png" id = "b7" style = "position : absolute; top:90px ; left : 50px;"/>
+			<label for = "B6" style = "position : absolute; top:160px ; left : 20px;">B6</label>
+			<img src="off.png" id = "b6" style = "position : absolute; top:160px ; left : 50px;"/></a>
+			<label for = "B5" style = "position : absolute; top:220px ; left : 20px;">B5</label>
+			<img src="off.png" id = "b5" style = "position : absolute;top:220px ; left : 50px;"/></a>
+			<label for = "B4" style = "position : absolute; top:280px ; left : 20px;">B4</label>
+			<img src="off.png" id = "b4" style = "position : absolute;top:280px ; left : 50px;"/></a>
+			<label for = "B3" style = "position : absolute; top:340px ; left : 20px;">B3</label>
+			<img src="off.png" id = "b3" style = "position : absolute;top:340px ; left : 50px;"/></a>
+			<label for = "B2" style = "position : absolute; top:400px ; left : 20px;">B2</label>
+			<img src="off.png" id = "b2" style = "position : absolute;top:400px ; left : 50px;"/></a>
+			<label for = "B1" style = "position : absolute; top:460px ; left : 20px;">B1</label>
+			<img src="off.png" id = "b1" style = "position : absolute;top:460px ; left : 50px;"/></a>
+			<label for = "B0" style = "position : absolute; top:520px ; left : 20px;">B0</label>
+			<img src="off.png" id = "b0" style = "position : absolute;top:520px ; left : 50px;"/></a>
+			</div>
+			<label id="name">OP- AMP</label>
+			<div id = "graph"></div>
+		</fieldset>
+	</div>
+
+	<div class="pane">Second tab content</div>
+	<div class="pane">Third tab content</div>
+	</div>
+	
+</div>
+
+</body>
+
+</html>

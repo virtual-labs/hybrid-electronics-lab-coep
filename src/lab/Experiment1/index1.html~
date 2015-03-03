@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html>
+
+<!--
+	This is a jQuery Tools standalone demo. Feel free to copy/paste.
+	                                                         
+	http://flowplayer.org/tools/demos/
+	
+	Do *not* reference CSS files and images from flowplayer.org when in production  
+
+	Enjoy!
+-->
+
+<head>
+	<title>Hybrid Lab Demo</title>
+
+	<!-- include the Tools -->
+	<link   type="text/css"  rel="stylesheet"  href="css/example.css"  />
+	<link href="../../css/common.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/jquery.js"> </script>
+		<script src="js/jquery.tools.min.js"></script>
+		<script type="text/javascript" src = "js/example.js"></script>
+		<script type="text/javascript" src="js/raphael.js"></script>
+		<script type="text/javascript" src="js/jquery.flot.js"></script>
+		<script type="text/javascript" src="js/utility.js"></script>
+		
+	<!--		<script type="text/javascript" src="js/monostable.js"></script>-->
+		
+	
+	<!-- tab styling -->
+		<link   type="text/css"  rel="stylesheet"  href="css/tabs.css"  />
+	
+	
+	<!-- tab pane styling -->
+	<style>
+	div.wrap {
+		width:700px;
+		margin-bottom:40px;
+	}
+	
+	.wrap .pane  {	
+		background:#fff repeat-x 0 20px;
+		display:none;		
+		padding:20px;
+		border:1px solid #999;
+		border-top:0;
+		font-size:14px;	 
+		font-size:18px;
+		color:#456;	
+		padding-bottom: 20px;
+    padding-left: 9px;
+    padding-right: 20px;
+    padding-top: 0px;
+		
+		_background-image:none;
+	}
+	
+	.wrap .pane p {
+		font-size:38px;	
+		margin:-10px 0 -20px 0;	
+		text-align:right;
+		color:#578;
+	}
+	#header{
+	top:2px;
+	left:2px;
+	position:relative;
+	border:2px groove  #c4c4c4;
+	width:892px;
+	height:130px;
+	/*overflow:auto;*/
+	background : url("../../images/ui-bg_gloss-wave_35_f6a828_500x100.png") repeat-x scroll 50% 50% #84BFDF;
+}
+.imag{position:absolute;z-index:9999;left:339px;top:4px;}
+	.imag1{position:absolute;z-index:9999;left:1000px;top:85px;}
+	</style>
+</head>
+
+<body onload="javascript:alert('Best viewed in Google Chrome')">
+<div id = "tabs">																					 
+	<div id="header"><span style="font-size:25px; color: #ffffff;"></span><img class = "imag" src="../../images/coep_logo_sim.png"></a>
+	<span style="font-size:20px;font-weight: bold;color: #ffffff;	"><h3>Various Arithmetic Circuits</h3></span>
+	</div>
+
+<div class="wrap" style="position:absolute; top:145px;">
+
+	<!-- the tabs -->
+	 <!-- the experiment 1 -->
+	<div class="wrap">
+			
+			<!-- the experiment 1 tabs -->
+			<ul class="tabs">
+				<li><a href="#">Adder</a></li>
+				<li><a href="#">Subtracter</a></li>
+				<li><a href="#">4 bit Adder/Subtractor</a></li> 
+			</ul>
+
+			<!--Adder -->
+			<div class="pane">
+						
+					<!-- the tabs -->
+						<ul class="tabs">
+							<li><a href="#">Half Adder</a></li>
+							<li><a href="#">Full Adder</a></li>
+							<li><a href="#">2bit Adder</a></li> 
+						</ul>
+					<!--half adder-->
+					
+					<div class="pane" id = "halfadder" >
+						<div id = "switch" style="position:absolute; top:-105px; left:10px;" >
+							<label class="lable_title" style="position: absolute; width:100px; left: 10px; top: 230px;">Half Adder</label>
+							<input type="button" style="position: absolute; top: 275px; left: 7px; height: 55px; width: 60px;" title="Run" alt="Run" value="Run" id="run_button_hadd" />
+							<input type="button" style="position: absolute; top: 275px; left: 69px; height: 55px; width: 60px;" title="Clear/Reset" alt="Clear/Reset" value="Clear" id="clear_button_hadd" />
+							<img src="images/halfadd.png" id= "img" style = "position :absolute;top:350px ; left :370px;"/>
+							<label id="halfinput1" style="position: absolute; width: 95px; left: 320px; top:280px;">Input A</label>
+							<label id="halfinput2" style="position: absolute; width: 95px; left: 505px; top:280px;">Input B</label>
+							<label id="halfsum" style="width: 95px; height: 22px; left: 500px;">sum-Output</label>
+							<label id="halfcarry" style="width: 95px; height: 22px; left: 279px;">carry-Output</label>
+							
+							<div id="switch0">
+								<input type="text" id="a_0_text" style="position: absolute; top: 274px; left: 377px; text-align: center; padding: 2px; margin-left: 13px;" size="1" maxlength="1" value="0" disabled="true">
+							<img style="position: absolute; top: 300px; left: 377px; margin-left: 10px; margin-top: 10px;" id="a_0" src="images/off.png">
+							
+							<input type="text" id="b_1_text" style="position: absolute; top: 274px; left: 432px; text-align: center; margin-left: 13px; padding: 2px;" size="1" maxlength="1" value="0" disabled="true">
+							<img src="images/off.png" id = "b_1" style = "position : absolute; top:300px ; left : 432px; margin-left: 10px; margin-top: 10px;"/>
+							</div>
+							<img src="images/half_adder_tt.png" style="position:absolute; top:400px ; left:620px;">
+							<img style="position: absolute; top: 632px; left: 384px; margin-bottom: 0px; padding-left: 8px;" id="carry" src="images/lightbulb.png">
+							<input type="text" id="carry_text" style="position: absolute; top: 672px; left: 377px; text-align: center; padding: 2px; margin-left: 10px;" size="1" maxlength="1" value="0" disabled="true">
+							
+							<img style="position: absolute; top: 632px; left: 442px; padding-left: 8px;" id="sum" src="images/lightbulb.png">
+							<input type="text" id="sum_text" style="position: absolute; top: 672px; left: 432px; text-align: center; padding: 2px; margin-left: 10px;" size="1" maxlength="1" value="0" disabled="true">
+						</div>
+					</div>
+					
+					<!--full adder-->
+					<div  class="pane">
+						<div id = "switch1" style="position:absolute; top:-139px; left:-92px;">
+							<label  class="lable_title" style="position: absolute; width:100px; left: 112px; top: 264px;">Full Adder</label>
+							<input type="button" style="position: absolute; top: 309px; left: 109px; height: 55px; width: 60px;" title="Run" alt="Run" value="Run" id="run_button_fadd" />
+							<input type="button" style="position: absolute; top: 309px; left: 171px; height: 55px; width: 60px;" title="Clear/Reset" alt="Clear/Reset" value="Clear" id="clear_button_fadd" />
+						     <img src="images/fulladd.png" id= "img1" style = "position : absolute;top:373px ; left :359px;"/>
+						     <label id="input1" style="left: 313px; top: 303px;">Input A</label>
+							 <label id="input2" style="top: 303px; left: 440px">Input B</label>
+							 <label id="input3" style="margin-left: 0px; width: 60px; height: 22px; top: 540px; left: 585px;">Input C</label>
+							 <label id="fullsum" style="top: 670px; left: 495px; width: 95px; height: 22px;">sum-Output</label>
+							 <label id="fullcarry" style="width: 95px; height: 22px; left: 290px; top: 670px;">carry-Output</label>
+							 <div id="switches1">
+							 <input type="text" id="button1_1_text" style="position: absolute; top: 300px; left: 360px; text-align: center; padding: 2px; margin-left: 27px;" size="1" maxlength="1" value="0" disabled="true">
+							<img style="position: absolute; top: 330px; left: 360px; margin-left: 25px; margin-top: 2px;" id="button1_1" src="images/off.png">
+							
+							<input type="text" disabled="true" value="0" maxlength="1" size="1" style="position: absolute; top: 300px; left: 414px; text-align: center; padding: 2px; margin-left: 29px;" id="button2_2_text">
+							<img style="position: absolute; top: 330px; left: 416px; margin-left: 25px; margin-top: 2px;" id="button2_2" src="images/off.png">
+							
+							<input type="text" id="button3_3_text" style="position: absolute; top: 460px; left: 540px; text-align: center; padding: 2px; margin-left: 42px;" size="1" maxlength="1" value="0" disabled="true">
+							<img style="position: absolute; top: 490px; left: 541px; margin-left: 40px; margin-top: 2px;" id="button3_3" src="images/off.png">
+							</div>
+							
+							<img src="images/full_adder_tt.png" style="position:absolute; top:400px ;left:650px;">
+							<img style="position: absolute; top: 657px; left: 368px; margin-left: 23px;" id="carry_fulladder" src="images/lightbulb.png">
+							<input type="text" id="carry_fulladder_text" style="position: absolute; top: 710px; left: 360px; text-align: center; padding: 2px; margin-left: 27px;" size="1" maxlength="1" value="0" disabled="true">
+							
+							<img style="position: absolute; top: 657px; left: 425px; margin-left: 23px;" id="sum_fulladder" src="images/lightbulb.png">
+							<input type="text" id="sum_fulladder_text" style="position: absolute; top: 710px; left: 414px; text-align: center; padding: 2px; margin-left: 27px;" size="1" maxlength="1" value="0" disabled="true">
+						</div>
+					</div>
+					 <!-- 2 bit adder-->
+					<div  class="pane">
+						<div id = "switch2" style="position:absolute; top:-139px; left:-10px;" >
+							<label class="lable_title" style="position: absolute; width:100px; left: 30px; top: 264px;">2 bit Adder</label>
+							<input type="button" style="position: absolute; top: 309px; left: 27px; height: 55px; width: 60px;" title="Run" alt="Run" value="Run" id="run_button_2bitadd" />
+							<input type="button" style="position: absolute; top: 309px; left: 89px; height: 55px; width: 60px;" title="Clear/Reset" alt="Clear/Reset" value="Clear" id="clear_button_2bitadd" />
+							
+						<label id="a1_2bit" style="width:70px; height:22px;">Input A1</label>
+						<label id= "b1_2bit" style="width:70px; height:22px;">Input B1</label>
+						<label id= "a2_2bit" style="width:70px; left=350px; height:22px;">Input A2</label>
+						<label id= "b2_2bit" style="width:70px; height:22px;">Input B2</label>
+						<!--<label id= "button5_2bit" style="position : absolute;top:384px ; left :45px;">C<sub></sub></label>-->
+						
+						
+						<img src="images/2bitadd.png" id="img1" style="position: absolute; top: 330px; left: 207px; margin-left: 58px;">
+						<div id="switches2">
+							<input type="text" id="button1_0_text" style="position: absolute; top: 321px; left: 310px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+						<img src="images/off.png" id = "button1_0" style = "position : absolute; top:307px ; left : 357px;"/>
+						
+						<input type="text" id="button2_1_text" style="position: absolute; top: 321px; left: 464px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+						<img src="images/off.png" id = "button2_1" style = "position : absolute; top:307px ; left : 413px;"/>
+						
+						<input type="text" id="button3_2_text" style="position: absolute; top: 321px; left: 508px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+						<img src="images/off.png" id = "button3_2" style = "position : absolute; top:307px ; left : 557px;"/>
+						
+						<input type="text" id="button4_3_text" style="position: absolute; top: 321px; left: 668px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+						<img src="images/off.png" id = "button4_3" style = "position : absolute; top:307px ; left : 613px;"/>
+						
+						<input type="text" id="button5_4_text" style="position: absolute; top: 466px; left: 808px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+						<img src="images/off.png" id = "button5_4" style = "position : absolute; top:452px ; left : 755px;"/>
+						</div>
+						<input type="text" id="sum2_2bit_text" style="position: absolute; top: 656px; left: 385px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+						<img style="position: absolute; top: 616px; left: 390px;" id="sum2_2bit" src="images/lightbulb.png">
+						
+						<input type="text" id="sum1_2bit_text" style="position: absolute; top: 653px; left: 585px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+						<img style="position: absolute; top: 616px; left: 591px;" id="sum1_2bit" src="images/lightbulb.png">
+						
+						<input type="text" disabled="true" value="0" maxlength="1" size="1" style="position: absolute; top: 580px; left: 270px; text-align: center;" id="carry_2bit_text">
+						<img style="position: absolute; top: 546px; left: 271px;" id="carry_2bit" src="images/lightbulb.png">
+						</div>
+					</div>
+					</div>
+		
+			
+			<!--Subtracter-->
+			<div class="pane">
+				<ul class="tabs">
+					<li><a href="#">Half Subtractor</a></li>
+					<li><a href="#">Full Subtractor</a></li>
+				</ul>
+				<!--half Subtractor-->
+				<div  class="pane">
+					<div id = "switch3" style="position:absolute; top:-139px; left:-92px;" >
+						<label class="lable_title" style="position: absolute; width:120px; left: 112px; top: 264px;">Half Subtractor</label>
+						<input type="button"  style="position: absolute; top: 309px; left: 109px; height: 55px; width: 60px;" title="Run" alt="Run" value="Run" id="run_button_hsub" />
+							<input type="button" style="position: absolute; top: 309px; left: 171px; height: 55px; width: 60px;" title="Clear/Reset" alt="Clear/Reset" value="Clear" id="clear_button_hsub" />
+					<img src="images/halfsub.png" id="img1" style="position: absolute; top: 338px; left: 333px;">
+					<label id="subAinput" style="width:60px; left:300px;"> Input A</label>
+					<label id="subBinput" style="left: 470px; width:60px"> Input B</label>
+					<label id="suboutput" style="left:410px;"> Output</label>
+					<label id="subborrow" style="left:349px;"> Borrow</label>
+					
+					<div id="switches3">
+					<input type="text" id="button_0_text" style="position: absolute; top: 274px; left: 361px;text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/off.png" id = "button_0" style = "position : absolute; top:302px ; left : 355px;"/>
+					
+					<input type="text" id="button_1_text" style="position: absolute; top: 274px; left: 417px;text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/off.png" id = "button_1" style = "position : absolute; top:302px ; left : 411px;"/>
+					</div>
+					<img src="images/half_sub_tt.png" style="position: absolute; top: 400px; left: 601px;">
+					<img src="images/lightbulb.png" id = "carry_halfsub" style = "position : absolute; top:649px ; left : 360px;"/>
+					<input type="text" id="carry_halfsub_text" style="position: absolute; top: 653px; left: 313px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					
+					<input type="text" id="sum_halfsub_text" style="position: absolute; top: 653px; left: 455px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/lightbulb.png" id = "sum_halfsub" style = "position : absolute; top:649px ; left : 417px;"/>
+					
+					</div>
+				</div>
+			<!--full subtractor-->
+				<div  class="pane">
+					<div id = "switch3" >
+					<label class="lable_title" style="position: absolute; width:120px; left: 20px; top: 125px;">Full Subtractor</label>		
+					<img style="position: absolute; top: 243px; left: 320px;" id="img1" src="images/fullsub.png">
+					<label id="fullAinput"> Input A</label>
+					<label id="fullBinput"> Input B</label>
+					<label id="fullCinput"> Input C</label>
+					<label id="fulloutput" style="left: 411px"> Output</label>
+					<label id="fullborrow" style="left: 348px"> Borrow</label>
+					<div id="switches4">
+						<input type="button" style="position: absolute; top: 170px; left: 17px; height: 55px; width: 60px;" title="Run" alt="Run" value="Run" id="run_button_fsub" />
+						<input type="button" style="position: absolute; top: 170px; left: 79px; height: 55px; width: 60px;" title="Clear/Reset" alt="Clear/Reset" value="Clear" id="clear_button_fsub" />
+						
+						<input type="text" id="button6_0_text" style="position: absolute; top: 215px; left: 300px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/off.png" id = "button6_0" style = "position : absolute; top:205px ; left : 350px;"/>
+					
+					<input type="text" id="button7_1_text" style="position: absolute; top: 215px; left: 463px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/off.png" id = "button7_1" style = "position : absolute; top:205px ; left : 406px;"/>
+					
+					<input type="text" id="button8_2_text" style="position: absolute; top: 427px; left: 530px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/off.png" id = "button8_2" style = "position : absolute; top:369px ; left : 527px;"/>
+					</div>
+					<img src="images/full_sub_tt.png" style="position:absolute; top:133px ; left:580px; ">
+					<input type="text" id="carry_fullsub_text" style="position: absolute; top: 547px; left: 305px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/lightbulb.png" id = "carry_fullsub" style = "position : absolute; top:542px ; left : 357px;"/>
+					
+					<input type="text" id="sum_fullsub_text" style="position: absolute; top: 544px; left: 457px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/lightbulb.png" id = "sum_fullsub" style = "position : absolute; top:540px ; left : 415px;"/>
+					</div>
+				</div>
+			</div>
+			<!--4 bit addre & subtracter-->			
+			<div class="pane">
+				<div id = "switch4"  style="position:absolute; left:-15px; top:50px;">
+					<label class="lable_title" style="position: absolute; width:180px; left: 25px; top: 35px;">4 bit Adder/Subtractor</label>
+					<img src="images/4bit addsub.png" id="4bit" style="position: absolute; top: 205px; left: 75px;">
+					<label id="b3_4as" style="left:77px; top:145px; width:65px;"> Input B3</label>
+					<label id="a3_4as" style="left:165px; top:145px; width:65px;"> Input A3</label>
+					<label id="b2_4as" style="left:270px; top:145px; width:65px;"> Input B2</label>
+					<label id="a2_4as" style="left:358px; top:145px; width:65px;"> Input A2</label>
+					<label id="b1_4as" style="left:461px; top:145px; width:65px;"> Input B1</label>
+					<label id="a1_4as" style="left:552px; top:145px; width:65px;"> Input A1</label>
+					<label id="b0_4as" style="left:647px; top:145px; width:65px;"> Input B0</label>
+					<label id="a0_4as" style="left:665px; top:145px; width:65px;"> Input A0</label>
+					<label id="count_4as" style="top: 210px; font-size: 11px;left: 835px; font-weight: bold;"><span style="text-decoration: overline;">ADD</span>/SUB</label>
+					<label id="s3_4as" style="top: 570px; left: 160px;"> S3</label>
+					<label id="s2_4as" style="top: 570px; left: 350px;"> S2</label>
+					<label id="s1_4as" style="top: 570px; left: 540px;"> S1</label>
+					<label id="s0_4as" style="top: 570px; left: 732px;"> S0</label>
+					<label id="carry_4as">CARRY</label>
+					<div id="switches5">
+						<input type="button" style="position: absolute; top: 75px; left: 27px; height: 55px; width: 60px;" title="Run" alt="Run" value="Run" id="run_button_4addsub"/>
+						<input type="button" style="position: absolute; top: 75px; left: 89px; height: 55px; width: 60px;" title="Clear/Reset" alt="Clear/Reset" value="Clear" id="clear_button_4addsub" />
+						
+					<input type="text" id="b3_0_text" style="position: absolute; top: 187px; left: 60px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/off.png" id = "b3_0" style = "position : absolute; top:174px ; left : 105px;"/>
+					
+					<input type="text" id="a3_1_text" style="position: absolute; top: 187px; left: 208px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/off.png" id = "a3_1" style = "position : absolute; top:174px ; left : 160px;"/>
+					
+					<input type="text" id="b2_2_text" style="position: absolute; top: 187px; left: 253px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img style="position: absolute; top: 174px; left: 297px;" id="b2_2" src="images/off.png">
+					
+					<input type="text" id="a2_3_text" style="position: absolute; top: 187px; left: 401px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/off.png" id = "a2_3" style = "position : absolute; top:174px ; left : 353px;"/>
+					
+					<input type="text" id="b1_4_text" style="position: absolute; top: 187px; left: 446px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/off.png" id = "b1_4" style = "position : absolute; top:174px ; left : 490px;"/>
+					
+					<input type="text" id="a1_5_text" style="position: absolute; top: 187px; left: 596px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/off.png" id = "a1_5" style = "position : absolute; top:174px ; left : 548px;"/>
+					
+					<input type="text" id="b0_6_text" style="position: absolute; top: 187px; left: 640px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/off.png" id = "b0_6" style = "position : absolute; top:174px ; left : 685px;"/>
+					
+					<input type="text" id="a0_7_text" style="position: absolute; top: 187px; left: 790px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/off.png" id = "a0_7" style = "position : absolute; top:174px ; left : 740px;"/>
+					
+					<input type="text" id="cout_8_text" style="position: absolute; top: 273px; left: 840px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					<img src="images/off.png" id = "cout_8" style = "position : absolute; top:223px ; left : 838px;"/>
+					</div>
+					<img style="position: absolute; top: 410px; left: 69px;" id="carry_4bit" src="images/lightbulb.png">
+					<input type="text" disabled="true" value="0" maxlength="1" size="1" style="position: absolute; top: 415px; left: 25px; text-align: center;" id="carry_4bit_text">
+					
+					<img src="images/lightbulb.png" id = "s3_4bit" style = "position : absolute; top:532px ; left : 147px;"/>
+					<input type="text" id="s3_4bit_text" style="position: absolute; top: 533px; left: 102px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					
+					<img src="images/lightbulb.png" id = "s2_4bit" style = "position : absolute; top:531px ; left : 340px;"/>
+					<input type="text" id="s2_4bit_text" style="position: absolute; top: 533px; left: 295px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					
+					<img src="images/lightbulb.png" id = "s1_4bit" style = "position : absolute; top:532px ; left : 535px;"/>
+					<input type="text" id="s1_4bit_text" style="position: absolute; top: 533px; left: 490px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+					
+					<img src="images/lightbulb.png" id = "s0_4bit" style = "position : absolute; top:532px ; left : 722px;"/>
+					<input type="text" id="s0_4bit_text" style="position: absolute; top: 533px; left: 677px; text-align: center;" size="1" maxlength="1" value="0" disabled="true" />
+				</div>
+			</div>
+	</div>
+	
+	
+	</div>
+
+<div style="position:absolute; top:782px; width:900px;margin:0 auto;">
+<div class="art-footer">
+                <div class="art-footer-t"></div>
+                <div class="art-footer-l"></div>
+                <div class="art-footer-b"></div>
+                <div class="art-footer-r"></div>
+                <div class="art-footer-body">
+                    <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+					<!--<a href="./../../../feedback.htm" class="art-rss-feedback-icon" title="RSS"></a>-->
+                            <div class="art-footer-text">
+                                <p><a href="#">About Us</a> | <a href="./../../../contacts.htm">Contact Us</a> | <a href="../../../feedback.htm">Feedback</a></p><p>Copyright &#169;2011.COEP Virtual Lab.</p>
+                                                            </div>
+                    <div class="cleared"></div>
+                </div>
+            </div>
+</div>
+
+
+</body>
+
+</html>
