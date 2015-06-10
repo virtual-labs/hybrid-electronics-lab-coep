@@ -69,7 +69,8 @@
                     "backup": [], 
                     "clean": [], 
                     "init": ["mv /var/www/index.html index.html.default",
-                        "cp -r ../build/* /var/www/"
+                        "cp -r ../build/* /var/www/",
+                        "service apache2 restart"
                         ], 
                     "pause": [], 
                     "publish": [], 
