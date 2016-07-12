@@ -1,0 +1,104 @@
+#+title: Requirement/Workflow for Hybrid electronics Lab
+#+Author: Integration Team
+#+Date: [2016-06-30]
+
+This document contains the basic work flow and requirement for Hybrid electronics.Testing should happen against all the requirements mentioned in this document by integration team.
+
+* Lab wise requirements
+
+Main page Should contain following tabs for Hybrid electronics Lab with the content related to the introduction.
+
+** Introduction
+
+Content should display on page related to the introduction of Hybrid electronics Lab.
+
+** List of experiments
+
+List of experiment related to Hybrid electronics Lab should display on page.
+
+* Experiment wise requirements
+
+** Design and Implementation of Various Arithmetic Circuits Experiment
+
+It should contain the Aim,Pretest, Theory,Procedure,Audio/Video,Post test,Review Questions,paper.,Photo Gallery and feedback on the left corner and all the tabs should contain the relevant information.
+
+- Pretest tab:When we click on the  Pretest link,Pretest page should get display on the screen with questions along with objectives and Submit and Reset button.
+
+- Simulator: User can select different tabs given in the experiment.Under that tabs again 2 or 3 tabs. According to selection respective simulator should get open.According to truth table at right side, simulator should work, user can change the input by pressing input buttons and "Run" button allows to run the experiment.User needs to observe the outputs according to truth table."Clear" button should clear the selected inputs and outputs.
+  
+- Posttest tab:When we click on the Pretest link,Posttest page should get display on the screen with questions along with objectives and Submit and Reset button.  
+  
+-Feedback tab:When we click on the Feedback link,Feedback page should get display with all fields and Submit button.
+
+** Design and simulate various code converters Experiment
+
+It should contain the Aim,Pretest, Theory,Procedure,Audio/Video,Post test,Review Questions,paper.,Photo Gallery and feedback on the left corner and all the tabs should contain the relevant information.
+
+- Pretest tab:When we click on the  Pretest link,Pretest page should get display on the screen with questions along with objectives and Submit and Reset button.
+
+- Simulator:User can select different tabs given in the experiment.According to selection respective simulator and timing diagram related to experiment should get open.According to truth table at right side, simulator should work,user can change the input by pressing input buttons and "Run" button allows to run the experiment.User needs to observe the outputs according to truth table andtiming digram should get verify."Clear" button should clear the selected inputs and outputs.
+  
+- Posttest tab:When we click on the Pretest link,Posttest page should get display on the screen with questions along with objectives and Submit and Reset button.  
+  
+-Feedback tab:When we click on the Feedback link,Feedback page should get display with all fields and Submit button.
+
+** Design and simulation of various counters and shift registers 
+
+It should contain the Aim,Pretest, Theory,Procedure,Audio/Video,Post test,Review Questions,Photo Gallery and feedback on the left corner and all the tabs should contain the relevant information.
+
+- Pretest tab:When we click on the  Pretest link,Pretest page should get display on the screen with questions along with objectives and Submit and Reset button.
+
+- Simulator:User can select different tabs given in the experiment.According to selection respective simulator and timing diagram related to experiment should get open.Here one slider button and four toggle buttons are provided.Slider button should vary clock frequency likewise other buttons should work according to their functions i.e start,stop,reset and manual clock. For the manual clock user need to press this button to give the clock input.Another one input is given in the last tab called "
+4 bit shift register", here user need to give 4 bit input.According to truth table at right side, simulator should work,user can change the input by pressing input buttons and "Run" button allows to run the experiment.User needs to observe the outputs according to truth table and timing digram should get verify."Clear" button should clear the selected inputs and outputs.
+
+- Posttest tab:When we click on the Pretest link,Posttest page should get display on the screen with questions along with objectives and Submit and Reset button.  
+  
+-Feedback tab:When we click on the Feedback link,Feedback page should get display with all fields and Submit button.
+
+** Design and simulation of Arithmatic logic unit
+
+It should contain the Aim,Pretest, Theory,Procedure,Audio/Video,Post test,Review Questions,Photo Gallery and feedback on the left corner and all the tabs should contain the relevant information.
+
+- Pretest tab:When we click on the  Pretest link,Pretest page should get display on the screen with questions along with objectives and Submit and Reset button.
+
+- Simulator:User can select different tabs given in the experiment.According to selection respective simulator related to experiment should get open.According to truth table at right side, simulator should work, user can change the input by pressing input buttons and "Run" button allows to run the experiment.User needs to observe the outputs according to truth table."Clear" button should clear the selected inputs and outputs.
+  
+- Posttest tab:When we click on the Pretest link,Posttest page should get display on the screen with questions along with objectives and Submit and Reset button.  
+  
+-Feedback tab:When we click on the Feedback link,Feedback page should get display with all fields and Submit button.
+
+** Design and Simulation of Decoders, Encoders, Multiplexer and Demultiplexer
+
+It should contain the Aim,Pretest,Theory,Procedure,Audio/Video,Post test,Review Questions,Photo Gallery and feedback on the left corner and all the tabs should contain the relevant information.
+
+- Pretest tab:When we click on the  Pretest link,Pretest page should get display on the screen with questions along with objectives and Submit and Reset button.
+
+- Simulator:User can select different tabs given in the experiment.According to selection respective simulator related to experiment should get open.User can change the input by pressing input buttons and "Run" button allows to run the experiment.User needs to observe the outputs."Clear" button should clear the selected inputs and outputs.
+  
+- Posttest tab:When we click on the Pretest link,Posttest page should get display on the screen with questions along with objectives and Submit and Reset button.  
+  
+-Feedback tab:When we click on the Feedback link,Feedback page should get display with all fields and Submit button.
+
+** Design and Simulate Analog to Digital Converter and Digital to Analog Converter
+
+It should contain the Aim,Pretest, Theory,Procedure,Audio/Video,Post test,Review Questions,Photo Gallery and feedback on the left corner and all the tabs should contain the relevant information.
+
+- Pretest tab:When we click on the  Pretest link,Pretest page should get display on the screen with questions along with objectives and Submit and Reset button.
+
+- Simulator: User can select different tabs given in the experiment.According to selection respective simulator related to experiment should get open. Here few slider input buttons are provided that should vary by varying slider.User can change the input by pressing input buttons and "Run" button allows to run the experiment and it should display the graph."Clear" button should clear the selected inputs and outputs.
+  
+- Posttest tab:When we click on the Pretest link,Posttest page should get display on the screen with questions along with objectives and Submit and Reset button.  
+  
+-Feedback tab:When we click on the Feedback link,Feedback page should get display with all fields and Submit button.
+
+** Implementation of monostable and astable oscillator using IC 555
+
+It should contain the Aim,Pretest, Theory,Procedure,Audio/Video,Post test,Review Questions,Photo Gallery and feedback on the left corner and all the tabs should contain the relevant information.
+
+- Pretest tab:When we click on the  Pretest link,Pretest page should get display on the screen with questions along with objectives and Submit and Reset button.
+
+- Simulator:  User can select different tabs given in the experiment.According to selection respective simulator related to experiment should get open. Here few slider input buttons are provided that should vary by varying slider.Here "Trigger" input button is provided which user needs to press, it should give the output and display output waveforms.
+  
+- Posttest tab:When we click on the Pretest link,Posttest page should get display on the screen with questions along with answer options and Submit and Reset button.  
+  
+-Feedback tab:When we click on the Feedback link,Feedback page should get display with all fields and Submit button.
